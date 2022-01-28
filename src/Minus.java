@@ -1,37 +1,33 @@
 import java.util.Scanner;
 
-public class Minus  {
-    double a;
-    int count = 0;
-    int ucount = 0;
-    double[] Massiv = new double[3];
-    Minus() {
+public class Minus extends Option {
 
+    public Minus(int var1, int var2, int var3) {
+        super(var1, var2, var3);
     }
 
-    void getMinus() throws Exception {
-        try (Scanner sc = new Scanner(System.in)) {
-            double[] Massiv = new double[3];
-            for (int i = 1; i < 4; i++){
-                System.out.println("Введите " + i + "-е число");
-                a = sc.nextDouble();
-                Massiv[i-1] = a;}
-
-            for (int i = 0; i < 3; i++){
-                if (Massiv[i]>0){
-                    count++;
-                }else {
-                    ucount++;
-                }
-            }
-            System.out.println("отрицательных чисел " + count);
-            System.out.println("Положительных чисел " + ucount);
-            System.out.println();
-
-        } catch (Exception exception) {
-            System.out.println("Ошибка ввода, Ошибка ввода");
+    @Override
+    public void doWork() {
+        int countPos = 0;
+        int countNeg = 0;
+        if (var1 > 0){
+            countPos ++;
+        } else {
+            countNeg ++;
         }
+
+        if (var2 > 0){
+            countPos ++;
+        } else {
+            countNeg ++;
+        }
+
+        if (var3 > 0){
+            countPos ++;
+        } else {
+            countNeg ++;
+        }
+
+        System.out.println("Положительных - " + countPos + " ,отрицательных - " + countNeg);
     }
-
-
 }

@@ -5,6 +5,8 @@ public class Plus  {
     int count = 0;
 
     double[] Massiv = new double[3];
+
+
     Plus() {
 
     }
@@ -12,6 +14,7 @@ public class Plus  {
     void getPlus() throws Exception {
         try (Scanner sc = new Scanner(System.in)) {
             double[] Massiv = new double[3];
+
             for (int i = 1; i < 4; i++){
             System.out.println("Введите " + i + "-е число");
             a = sc.nextDouble();
